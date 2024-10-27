@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* create a root variable for color */
+:root {
+    --counter-background-color: #FF9A0C;
+    --counter-text-color: #fff;
+    --register-btn-background-color: #FA072F;
+    --register-btn-text-color: #fff;
+}
+@font-face {
+    font-family: 'Porta';
+    src: url('fonts/Porta-Regular.ttf') format('truetype');
+  }
+  
+
+
+body {
+    font-family: 'Porta', sans-serif, Arial, Helvetica, sans-serif;
+    user-select: none;
+    background-color: #f5f5f5;
+
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.register-btn, .register-btn-sm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-weight: bold;
+    border-radius: 31px;
+    color: var(--register-btn-text-color);
+    background: var(--register-btn-background-color);
+    width: 200px;
+    height: 50px;
+    transition: all 0.3s ease, opacity 0.3s ease; 
+    }
+
+    .register-btn-sm{
+        border-radius: 11px;
+        width: 120px;
+        height: 36px;
+        font-size: 14px;
+        transition: all 0.3s ease, opacity 0.3s ease; 
+}
+.register-btn:hover, .register-btn-sm:hover{
+        background: var(--register-btn-background-color);
+        opacity: 0.6;
+}
+
+
+
+.countdown-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--counter-background-color);
+    
+}
+.countdown-container-sm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 5px;
+    background-color: var(--counter-background-color);
+    border-radius: 9px;
+    margin: 10px;
+}
+.countdown-container-sm .counter-value-column{
+    margin: 0 5px;
+}
+
+.counter-value-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    color: var(--counter-text-color);
+    font-weight: bold;
+}
+.counter-value-column .countdown-value{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.counter-value-column .countdown-label{
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.countdown-container-sm .countdown-value{
+    font-size: 1rem;
+    margin-bottom: 5px;
+
+}
+.countdown-container-sm .countdown-label{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+/* For AI meet title and subtitle */
+
+#title{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 20px;
+}
+#subtitle{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ai-meet-when{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+.ai-meet-when h2{
+    font-size: 2.3rem;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    font-style: normal;
+    text-transform: uppercase;
+
+
+}
+.events-title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: start;
+    width: 80%;
+    
+}
+#register-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+#register-btn-wrapper-item{
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+}
+
+
+/* Event */
+.events-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.event{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    width: 80vw;
+}
+.main-event-wrapper{
+    border: #4833335b 1px solid;
+    border-radius: 10px;
+}
+.other-event-details {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+}
+.event-title{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensures it takes the full width */
+}
+
+.event-description{
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.512);
+    text-align: justify;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    line-clamp: 3; /* Limit to 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.event-img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.register-btn-parent{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.register-btn-parent-item{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.event-name{
+    padding: 10px;
+}
+
+.event .image-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    object-fit: contain;
+}
+
+/* sponsered-wrapper */
+#parent-sponsered-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+#sponsered-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 80vw;
+}
+.sponsered-img{
+    height: fit-content;
+    width: 100px;
+    object-fit: contain;
+}
+.title-ai{
+    background: rgb(4, 86, 130);
+    color: white;
+    padding: 11px;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Class to apply the fade-in animation */
+.fade-in {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s forwards; /* Animation duration */
+}
+.visible {
+    opacity: 1; /* Fully visible */
+    animation: fadeIn 0.5s forwards; /* Animation duration */
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+    .event{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .event-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #register-btn-wrapper-item{
+        position: relative;
+       
+    }
+    
+}
